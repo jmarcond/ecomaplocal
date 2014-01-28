@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+<title>EcoMap Live</title>
+
+<!-- Bootstrap core CSS -->
+<link href="./dist/css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="./css/carousel.css" rel="stylesheet">
+
+<style>
+#drop_zone {
+	border: 2px dashed #bbb;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 25px;
+	text-align: center;
+	font: 20pt bold 'Vollkorn';
+	color: #bbb;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="navbar-wrapper">
+		<div class="container">
+
+			<div class="navbar navbar-inverse navbar-static-top"
+				role="navigation">
+				<div class="container" id="navbar_container"></div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div class="container" style="padding-top: 100px;">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Description</h3>
+			</div>
+			<div class="panel-body">
+				<div class="col-md-12" id="form-div">
+				<form class="form-horizontal " role="form" id="addOrEditForm">
+					<input type="hidden" class="form-control " id="projectIdInput" value="">
+					<div class="form-group ">
+						<label for="inputName" class="col-sm-2 control-label ">Name</label>
+						<div class="col-sm-10 ">
+							<input type="text" class="form-control " id="nameInput"
+								placeholder="Project's Name">
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label for="inputNotes" class="col-sm-2 control-label ">Notes</label>
+						<div class="col-sm-10 ">
+							<textarea class="form-control " id="notesInput"
+								placeholder="Project's Notes"></textarea>
+						</div>
+					</div>
+						<div class="form-group ">
+							<label for="audience" class="col-sm-2 control-label" >Privacy</label>
+							<div class="col-sm-10">
+								<label class="checkbox-inline"> <input type="radio"
+									id="inlineCheckbox1" value="1" name="privacyInput">
+									Public
+								</label> <label class="checkbox-inline"> <input type="radio"
+									id="inlineCheckbox2" value="0" name="privacyInput" checked>
+									Private
+								</label> 
+							</div>
+						</div>
+					<div class="form-group " >
+						<button type="submit" class="btn btn-primary" style = "float:right; margin: 5px;">Save</button>
+						<button type="button" class="btn btn-danger" style = "float:right; margin: 5px;">Cancel</button>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel panel-default" id="material_panel"
+			style="display: none;">
+			<div class="panel-heading">
+				<h3 class="panel-title">Material</h3>
+			</div>
+			<div class="panel-body">
+				<div class="col-md-12" id="addfiles-div">
+					<div id="drop_zone">Drop files here</div>
+					<output id="list"></output>
+					<script>
+						
+					</script>
+				</div>
+			</div>
+			<div class="col-md-12" id="files-table-div">
+			
+			
+			</div>
+		</div>
+
+		<hr>
+		<footer>
+			<p>&copy; Company 2013</p>
+		</footer>
+	</div>
+	<!-- /container -->
+
+	<!-- linkage modal -->
+	<div class="modal fade" id="message_modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Message</h4>
+				</div>
+				<div class="modal-body">
+					<p id="message_area"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./dist/js/bootstrap.min.js"></script>
+
+	<script src="./js/helper.js"></script>
+
+	<script src="./js/Login.js"></script>
+	<script src="./js/Menubar.js"></script>
+	<script src="./js/classes/Table.js"></script>
+	<script src="./js/classes/EcoFile.js"></script>
+	<script src="./js/classes/Project.js"></script>
+	
+	<script src="./js/navbar_main.js"></script>
+	<script src="./js/addOrEditProject_main.js"></script>
+	
+
+</body>
+</html>
